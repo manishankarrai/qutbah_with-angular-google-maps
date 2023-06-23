@@ -1,0 +1,54 @@
+<div class="qutbah_start">
+    <div class="headStart">
+        <div class="logo">
+            <h1>Qutbah</h1>
+        </div>
+        <div class="yourlocation" (click)="checklocation()">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <p>Aditya Mall, Indrapuram Ghaziabad </p>
+        </div>
+        
+        <!-- <div class="filter">
+            <i class="fa fa-filter" aria-hidden="true"></i>
+        </div> -->
+    </div>
+    <div class="selectbyarea">
+        <select name="" id="">
+            <option value="">State</option>
+            <option value="lucknow">LuckNow</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Up">Utter Padesh</option>
+        </select>
+        <select name="" id="">
+            <option value="">City</option>
+            <option value="Delhi">Delhi </option>
+            <option value="Ghaziabad">Ghaziabad</option>
+            <option value="Lucknow">Lucknow</option>
+
+        </select>
+        <select name="" id="">
+            <option value="">Area</option>
+            <option value="noida sec22">Noida sec22</option>
+            <option value="Noida sec33">Noida sec 33</option>
+            <option value="Noida sec 44"> Noida sec 44</option>
+        </select> 
+        <button (click)="searchmosque()">Search</button>
+    </div>
+    <h1 class="near_mosque">Near Your Location Mosque</h1>
+    <div class="nearestmosque" *ngFor="let x of mydata" routerLink="/test">
+        <div class="mosqueLogo">
+            <img src="../../assets/image/logo23.jpeg" alt="">
+        </div>
+        <div class="mosqueDetail">
+            <h2>Azmer Chisti Mosque, GhAziabad</h2>
+            <p>B-55 , Rajendra park , indrapuram, Ghaziabad</p>
+        </div>
+        <div class="mosqueVisite">
+
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+        </div>
+
+    </div>
+
+
+</div>

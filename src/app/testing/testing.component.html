@@ -1,0 +1,47 @@
+<!-- google-map-demo.component.html -->
+<google-map height="400px"
+            width="750px"
+            [center]="center"
+            [zoom]="zoom"
+            (mapClick)="addMarker($event)" *ngIf="!locationBool">
+  <map-marker #marker="mapMarker"
+   *ngFor="let location of locations" [position]="{ lat: location.lat, lng: location.lng }" 
+  [title]="location.name"
+
+  (mapClick)="openInfoWindow(marker ,location.name)" >
+  <map-info-window> {{name}}  </map-info-window>
+  <!-- <map-ground-overlay [url]="imageUrl" [bounds]="imageBounds"></map-ground-overlay> -->
+</map-marker>
+  
+  
+</google-map>
+<google-map height="400px"
+            width="750px"
+            [center]="center"
+            [zoom]="zoom"
+            
+            (mapClick)="addMarker($event)"  *ngIf="locationBool" >
+  <map-marker #marker="mapMarker"
+   *ngFor="let location of locations" [position]="{ lat: location.lat, lng: location.lng }" 
+  [title]="location.name"
+
+  (mapClick)="openInfoWindow(marker ,location.name)">
+  <map-info-window> {{name}}  </map-info-window>
+  <!-- <map-ground-overlay [url]="imageUrl" [bounds]="imageBounds"></map-ground-overlay> -->
+</map-marker>
+  
+  
+</google-map>
+
+
+<!-- *ngFor="let location of locations" [position]="{ lat: location.lat, lng: location.lng }" 
+[title]="location.name" -->
+
+<!-- <p>testing works!</p>
+<google-map width="500px" height="400px" [center]="{ lat: 40, lng: -74 }" [zoom]="6">
+    <map-marker *ngFor="let location of locations" [position]="{ lat: location.lat, lng: location.lng }" 
+    [title]="location.name"></map-marker>
+  </google-map>
+   -->
+
+   <button routerLink="/">Go Back</button>
